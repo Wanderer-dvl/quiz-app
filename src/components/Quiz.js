@@ -3,15 +3,15 @@ import { useState } from 'react';
 const Quiz = () => {
     //console.log(QuestionsData)
     const [current, setCurrent] = useState(0)
-    const [selectedChoice, setSelectedChoice] = useState("")
+    const [selected, setSelected] = useState("")
     return(
         <div className="quiz">
             <h1>{QuestionsData[current].question}</h1>
             <div className="choices">
-                <button onClick={()=>setSelectedChoice("A")}>{QuestionsData[current].A}</button>
-                <button onClick={()=>setSelectedChoice("B")}>{QuestionsData[current].B}</button>
-                <button onClick={()=>setSelectedChoice("C")}>{QuestionsData[current].C}</button>
-                <button onClick={()=>setSelectedChoice("D")}>{QuestionsData[current].D}</button>
+                <button>{QuestionsData[current].A}</button>
+                <button>{QuestionsData[current].B}</button>
+                <button>{QuestionsData[current].C}</button>
+                <button>{QuestionsData[current].D}</button>
             </div>
             <p>{`${current + 1}/${QuestionsData.length}`}</p>
         </div>
